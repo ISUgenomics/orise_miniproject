@@ -26,14 +26,14 @@ nanopore2 <- read_delim("csv-nanopore-set2.csv", delim = ",")
 pacbio <- read_delim("csv-pacbio-set.csv", delim = ",")
 
 names(hiseq) <- names(hiseq) %>% gsub(" ", "_", .) %>% gsub("/", "_", .)
-names(miseq) <- names(hiseq) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
-names(novaseq) <- names(hiseq) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
-names(nanopore1) <- names(hiseq) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
-names(nanopore2) <- names(hiseq) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
-names(pacbio) <- names(hiseq) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
+names(miseq) <- names(miseq) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
+names(novaseq) <- names(novaseq) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
+names(nanopore1) <- names(nanopore1) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
+names(nanopore2) <- names(nanopore2) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
+names(pacbio) <- names(pacbio) %>% gsub(" ", "_", .)  %>% gsub("/", "_", .)
 ```
 
-## Merge Into an Excel File
+## Merge Info an Excel File
 
 ``` r
 hiseq$HiSeq = TRUE
@@ -104,7 +104,7 @@ merged_df <- dplyr::bind_rows(
     Year = Publication_Year %>% uniqMerge(.),
     Title = Title %>% uniqMerge(.),
     Authors = Authors %>% uniqMerge(.),
-    Journal_Book = Journal_Book %>% uniqMerge(.),
+    Journal = Journal_Book %>% uniqMerge(.),
     Citation = Citation %>% uniqMerge(.),
     DOI = DOI %>% uniqMerge(.),
     Create_Date = Create_Date %>% uniqMerge(.)
@@ -113,3 +113,25 @@ merged_df <- dplyr::bind_rows(
 
 writexl::write_xlsx(merged_df, path="SeqTech_new.xlsx")
 ```
+
+``` r
+temp <- merged_df %>% 
+  mutate(
+    groups = dplyr::case_when(HiSeq=="TRUE" ~ "HiSeq",
+                              MiSeq=="TRUE" ~ "MiSeq",
+                              NovaSeq=="TRUE" ~ "NovaSeq",
+                              Nanopore=="TRUE" ~ "Nanopore",
+                              PacBio=="TRUE" ~ "PacBio")
+  ) 
+
+ggplot(temp, aes(x=Year, fill=groups)) +
+  geom_bar() +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle=90, hjust=1, vjust=0.5)) +
+  labs(y = "PubMed Papers", x= "Publication Year", fill="SeqTech")
+```
+
+![](imgs/unnamed-chunk-3-1.png)<!-- -->
+
+Heh, I think there’s something wrong with my nanopore results… way too
+many compared to others. Will restrict it to “Nanopore DNA”.
