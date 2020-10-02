@@ -12,6 +12,8 @@ For plant species, the smallest nuclear genome seemed to be the bladderwort (Utr
 
 There are [several bioprojects](https://www.ncbi.nlm.nih.gov/bioproject/?term=utricularia+gibba) associated with bladderwort including isolating regulatory elements for other crop species ([PRJNA595351](https://www.ncbi.nlm.nih.gov/bioproject/595351)). 
 
+* Check if bladderwort is part of [1KP (1000 Plant) Project](https://db.cngb.org/onekp/). I like their [expandable taxa tree](https://db.cngb.org/onekp/species/) for list of species.
+
 For insect species, the smallest genome seems to be the arctic midge with an estimated genome length of 96Mb (find citation here). However since the arctic midge is only located in Antarctica, obtaining a sample might be difficult. Midges that are currently being sequenced in the [ag100pest project](http://i5k.github.io/ag100pest) include Oat stem midge (Mayetiola avenae) and Barley stem midge (Mayetiola hordei).  
 
 ## Methods
