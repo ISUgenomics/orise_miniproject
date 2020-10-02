@@ -1,20 +1,22 @@
 # ORISE Miniproject
 
+**Purpose:** An educational exercise on budgetting a genome sequence project. Hopefully will gain a better understanding on getting price quotes for current techniques/equipment/reagents, planning the project timeline, and types of research questions for real world applications.
+
 ## Introduction
 
-### Why search for a minimal genome?
+### Why search for a minimalistic genome?
 
-Small genome organisms provide a practice dataset for genome assembly, and can hint at a minimal gene set for a living organism. For example, Craig Venter's group was examining small-genome organisms to identify a "minimal genome" and "synthesize a working genome from scratch" ([Nature article](https://www.nature.com/news/2006/061009/full/news061009-10.html#:~:text=How%20small%20can%20a%20genome,and%20182%20protein-coding%20genes)). Since many of the single cell organisms have already been explored, I restricted my minimal-genome organism search to plant or insect species.
+Genome assembly is a long arduous process. Small genome organisms can provide a simplified practice dataset for genome assembly, and can hint at a minimal gene set for a living organism. For example, Craig Venter's group was examining small-genome organisms to identify a "minimal genome" and "synthesize a working genome from scratch" ([Nature article](https://www.nature.com/news/2006/061009/full/news061009-10.html#:~:text=How%20small%20can%20a%20genome,and%20182%20protein-coding%20genes)). Since many of the single cell organisms have already been explored, I restricted my minimal-genome organism search to plant or insect species.
 
-### What plant or insect has a minimal genome?
+### Which plant or insect species has a minimalistic genome?
 
-For plant species, the smallest nuclear genome seemed to be the bladderwort (Utricularia gibba) with a length of 82Mb ([Ibarra-Laclette et al, 2013](ttps://pubmed.ncbi.nlm.nih.gov/23665961/)) or more recently 100Mb ([Lan et al, 2017](https://pubmed.ncbi.nlm.nih.gov/28507139/)). The bladderwort plants are carnivorous (insect eating), which might explain nutrient-processing gene loss, and its short genome length. However while the nucleotide length seems to be among the smallest plant genomes, the number of genes are quite high (25K?) (cite or link) with at least 2 whole genome duplication events from near species grape and tomato. Since bladderwort sits in freshwater ponds, catching insects in little bladders, several of the genes may be related to defense against an aquatic environment. It's possible that grape may be a more appropriate minimal-genome test subject.
+For plant species, the smallest nuclear genome seemed to be the bladderwort (Utricularia gibba) with a length of 82Mb ([Ibarra-Laclette et al, 2013](https://pubmed.ncbi.nlm.nih.gov/23665961/)) or more recently 100Mb ([Lan et al, 2017](https://pubmed.ncbi.nlm.nih.gov/28507139/)). The bladderwort plants are carnivorous (insect eating), which might explain nutrient-processing gene loss, and its short genome length. However while the nucleotide length seems to be among the smallest plant genomes, the number of genes are quite high (25K?) (cite or link) with at least 2 whole genome duplication events from near species grape and tomato. Since bladderwort sits in freshwater ponds, catching insects in little bladders, several of the genes may be related to defense against an aquatic environment. It's possible that grape may be a more appropriate minimal-genome test subject.
 
 There are [several bioprojects](https://www.ncbi.nlm.nih.gov/bioproject/?term=utricularia+gibba) associated with bladderwort including isolating regulatory elements for other crop species ([PRJNA595351](https://www.ncbi.nlm.nih.gov/bioproject/595351)). 
 
 * Check if bladderwort is part of [1KP (1000 Plant) Project](https://db.cngb.org/onekp/). I like their [expandable taxa tree](https://db.cngb.org/onekp/species/) for list of species.
 
-For insect species, the smallest genome seems to be the arctic midge with an estimated genome length of 96Mb (find citation here). However since the arctic midge is only located in Antarctica, obtaining a sample might be difficult. Midges that are currently being sequenced in the [ag100pest project](http://i5k.github.io/ag100pest) include Oat stem midge (Mayetiola avenae) and Barley stem midge (Mayetiola hordei).  
+For insect species, the smallest nuclear genome seems to be the arctic midge with an estimated genome length of 96Mb (find citation here). However since the arctic midge is only located in Antarctica, obtaining a sample might be difficult. Midges that are currently being sequenced in the [ag100pest project](http://i5k.github.io/ag100pest) include Oat stem midge (Mayetiola avenae) and Barley stem midge (Mayetiola hordei).  
 
 ## Methods
 
